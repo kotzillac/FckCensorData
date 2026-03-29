@@ -1,0 +1,41 @@
+import yt_dlp
+import sys
+import json
+from git import Repo
+
+id = input("Yandex Music track ID or URL: ").split('/')[-1].split('?')[0]
+
+print("Fetching track info...")
+track_name = id
+try:
+    from yandex_music import Client
+    client = Client().init()
+    track_info = client.tracks([id])[0]
+    track_name = f'{track_info.title} - {(", ".join(track_info.artistsName()))}'
+except Exception as e:
+    print(f"Could not fetch track info: {e}")
+
+url = input("Track URL: ")
+
+repo = Repo('.')
+
+def download_sound(url):
+    ydl_opts = {
+        'format': 'bestaudio/best',
+        'outtmpl': f'tracks/{id}.%(ext)s',
+    }
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        ydl.download([url])
+
+download_sound(url)
+
+with open('list.json', 'r') as f:
+    data = json.loads(f.read())
+    data['tracks'][id] = url
+
+with open('list.json', 'w') as f:
+    json.dump(data, f)
+
+repo.index.add(['list.json', 'tracks/'])
+repo.index.commit(f"add track «{track_name}»")
+print(f'Successfully added track {track_name}')
