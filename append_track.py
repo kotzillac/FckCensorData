@@ -25,7 +25,7 @@ while True:
         def download_sound(url):
             ydl_opts = {
                 'format': 'bestaudio/best',
-                'outtmpl': f'tracks/{id}.%(ext)s',
+                'outtmpl': f'tracks/{id}',
             }
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                 ydl.download([url])
