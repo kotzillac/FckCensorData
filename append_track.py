@@ -1,6 +1,11 @@
 import yt_dlp
 import json
+import os
+from dotenv import load_dotenv
 from git import Repo
+
+load_dotenv()
+token = os.getenv("API_TOKEN")
 
 while True:
     id = input("Yandex Music track ID or URL: ").split('/')[-1].split('?')[0]
@@ -8,10 +13,10 @@ while True:
     print("Fetching track info...")
 
     from yandex_music import Client
-    client = Client().init()
+    client = (Client(token) if token else Client()).init()
     track_info = client.tracks([id])[0]
     track_name = f'{track_info.title} - {(", ".join(track_info.artistsName()))}'
-
+    print(f'Track name: {track_name}')
     url = input("Track URL: ")
 
     should_download = input("Download track? (y/n): ").lower() == 'y'
@@ -35,7 +40,7 @@ while True:
         json.dump(data, f, indent=4)
         
     with open('README.md', 'a', encoding='utf-8') as f:
-        f.write(f'- [{track_name}](https://music.yandex.ru/track/{id})\n')
+        f.write(f'\n- [{track_name}](https://music.yandex.ru/track/{id})')
 
     repo.index.add(['list.json', 'tracks/', "README.md"])
     repo.index.commit(f"add track «{track_name}»")
