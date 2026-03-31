@@ -20,7 +20,7 @@ while True:
     url = input("Track URL: ")
 
     repo = Repo('.')
-    should_download = False
+    should_download = True
     if (url):
         should_download = input("Download track? (y/n): ").lower() == 'y'
         if should_download:
