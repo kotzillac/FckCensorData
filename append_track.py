@@ -19,18 +19,20 @@ while True:
     print(f'Track name: {track_name}')
     url = input("Track URL: ")
 
-    should_download = input("Download track? (y/n): ").lower() == 'y'
     repo = Repo('.')
-    if should_download:
-        def download_sound(url):
-            ydl_opts = {
-                'format': 'bestaudio/best',
-                'outtmpl': f'tracks/{id}',
-            }
-            with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-                ydl.download([url])
+    should_download = False
+    if (url):
+        should_download = input("Download track? (y/n): ").lower() == 'y'
+        if should_download:
+            def download_sound(url):
+                ydl_opts = {
+                    'format': 'bestaudio/best',
+                    'outtmpl': f'tracks/{id}',
+                }
+                with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+                    ydl.download([url])
 
-        download_sound(url)
+            download_sound(url)
 
     with open('list.json', 'r') as f:
         data = json.loads(f.read())
