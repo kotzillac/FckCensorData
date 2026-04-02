@@ -2,7 +2,7 @@ P.S. Это форк репозитория от [Hazzz895](https://github.com/H
 
 # Поддерживаемые треки:
 - [вот она - zavet](https://music.yandex.ru/track/88057589)
-- [Мама, я люблю - Anacondaz]((https://music.yandex.ru/track/25319594))
+- [Мама, я люблю - Anacondaz](https://music.yandex.ru/track/25319594)
 - [My Sweet Lullaby - zavet](https://music.yandex.ru/track/81624799)
 - [оранжевая песня - zavet, Bouledvard Depo](https://music.yandex.ru/track/67489473)
 - [Я уёбываю в джаз - Кишлак](https://music.yandex.ru/track/91715693)
