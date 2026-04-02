@@ -1,6 +1,5 @@
 import yt_dlp
 import json
-import os
 
 while True:
     id = input("Yandex Music track ID or URL: ").split('/')[-1].split('?')[0]
@@ -28,7 +27,7 @@ while True:
 
     with open('list.json', 'r') as f:
         data = json.loads(f.read())
-        data['tracks'][id] = f'https://cdn.jsdelivr.net/gh/kotzilla/FckCensorData/tracks/{id}'
+        data['tracks'][id] = f'https://cdn.statically.io/gh/kotzillac/FckCensorData@main/tracks/{id}'
 
     with open('list.json', 'w') as f:
         json.dump(data, f, indent=4)
