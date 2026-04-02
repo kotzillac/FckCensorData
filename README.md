@@ -1,9 +1,16 @@
+P.S. Это форк репозитория от [Hazzz895](https://github.com/Hazzz895/FckCensorData)
+
 # Поддерживаемые треки:
-- вот она - zavet
-- Мама, я люблю - Anacondaz
+- [вот она - zavet](https://music.yandex.ru/track/88057589)
+- [Мама, я люблю - Anacondaz]((https://music.yandex.ru/track/25319594))
 - [My Sweet Lullaby - zavet](https://music.yandex.ru/track/81624799)
 - [оранжевая песня - zavet, Bouledvard Depo](https://music.yandex.ru/track/67489473)
 - [Я уёбываю в джаз - Кишлак](https://music.yandex.ru/track/91715693)
 - [Самый лучший день - Кишлак](https://music.yandex.ru/track/102494056)
 - [Сумасшедшая - Lida, CMH, GSPD](https://music.yandex.ru/track/109996936)
 - [96 слёз - zavet](https://music.yandex.ru/track/76780018)
+- [Не ангел - Lizer](https://music.yandex.ru/track/113240879)
+- [АНТИСВЕТЛАНА - NEXTIME](https://music.yandex.ru/track/146150936)
+- [СВЕТЛАНА! - NEXTIME](https://music.yandex.ru/track/144998587)
+- [ALASKA PUFFER - паранойя](https://music.yandex.ru/track/133901297)
+- [ALASKA PUFFER 2 - паранойя](https://music.yandex.ru/track/145242788)
