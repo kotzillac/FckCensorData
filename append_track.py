@@ -27,7 +27,7 @@ while True:
 
     with open('list.json', 'r') as f:
         data = json.loads(f.read())
-        data['tracks'][id] = f'https://cdn.statically.io/gh/kotzillac/FckCensorData@main/tracks/{id}'
+        data['tracks'][id] = f'https://github.com/kotzillac/FckCensorData/raw/refs/heads/main/tracks/{id}'
 
     with open('list.json', 'w') as f:
         json.dump(data, f, indent=4)
